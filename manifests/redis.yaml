@@ -6,5 +6,6 @@ spec:
   chart:
     name: redis
     chartVersion: 12.8.0
+  helmVersion: v3
   values:
     password: 'admin'
