@@ -1,0 +1,10 @@
+apiVersion: kots.io/v1beta1
+kind: HelmChart
+metadata:
+  name: redis
+spec:
+  chart:
+    name: redis
+    chartVersion: 12.8.0
+  values:
+    password: 'admin'
