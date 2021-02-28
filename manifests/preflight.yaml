@@ -1,0 +1,14 @@
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Preflight
+metadata:
+  name: redis-preflight-checks
+spec:
+  analyzers:
+    - storageClass:
+        checkName: Check for default storage class
+        outcomes:
+          - fail:
+              message: No default storage class found.
+          - pass:
+              message: Default storage class found
+
