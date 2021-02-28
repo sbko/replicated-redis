@@ -8,4 +8,10 @@ spec:
     chartVersion: 12.8.0
   helmVersion: v3
   values:
-    password: 'admin'
+    password: repl{{ ConfigOption "password" }}
+    master:
+      persistence:
+        size: repl{{ ConfigOption "psize" }}
+    slave:
+      persistence:
+        size: repl{{ ConfigOption "ssize" }}

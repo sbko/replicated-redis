@@ -1,0 +1,27 @@
+apiVersion: kots.io/v1beta1
+kind: Config
+metadata:
+  name: redis-config
+spec:
+  groups:
+    - name: settings
+      title: Redis Config
+      description: Configure your Redis installation.
+      items:
+        - name: password
+          title: Redis Admin Password
+          help_text: Set your admin password
+          type: password
+          value: ''
+          default: 'adminchangeme'
+          required: true
+        - name: psize
+          title: Master Persistent Volume Size
+          type: text
+          value: ''
+          default: '12Gi'
+        - name: ssize
+          title: Slave Persistent Volume Size
+          type: text
+          value: ''
+          default: '12Gi'
