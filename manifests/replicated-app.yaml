@@ -1,0 +1,10 @@
+apiVersion: kots.io/v1beta1
+kind: Application
+metadata:
+  name: redis
+spec:
+  title: Redis
+  icon: https://dwglogo.com/wp-content/uploads/2017/12/1100px_Redis_Logo_01.png
+  statusInformers:
+    - statefulsets/redis-master
+    - statefulsets/redis-slave
